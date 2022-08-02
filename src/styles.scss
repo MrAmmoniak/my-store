@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: Convergence;
+  src: url(./assets/fonts/Convergence-Regular.ttf);
+}
+@font-face {
+  font-family: Mario Kart;
+  src: url(./assets/fonts/Mario-Kart-DS.ttf);
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #0b0e1d inset;
+  transform: background-color 5000s ease-in-out  ;
+  font-family: 'Convergence';
+  font-size: 1.2rem;
+  caret-color: transparent;
+}
+
+input:-webkit-autofill::first-line {
+  font-family: 'Convergence';
+  font-size: 1.2rem;
+}
+
+
+
+
+body {
+  background: #0b0e1d;
+  font-family: 'Convergence';
+  height: 100vh;
+  font-size: 1.2rem;
+}

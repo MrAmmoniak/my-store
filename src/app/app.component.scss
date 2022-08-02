@@ -1,0 +1,215 @@
+$clr-primary: #18ffff;
+$clr-primary-light: #adffff;
+$clr-primary-dark: #091034;
+$clr-gray: #c0c0c0;
+$clr-bg: #0c0e19;
+$radius: 0.5rem;
+
+@font-face {
+  font-family: Mario Kart;
+  src: url(/src/assets/fonts/Mario-Kart-DS.ttf);
+}
+
+
+form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(5, auto);
+}
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+
+  &--btn {
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  &--btn:hover {
+    opacity: 75%;
+
+  }
+
+
+  &--input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid $clr-gray;
+    border-radius: $radius;
+    font-family: inherit;
+    padding: 0.5rem;
+    font-size: inherit;
+    color: white;
+    outline: none;
+
+    background: none;
+
+    &:hover {
+      border-color: $clr-primary-light;
+    }
+
+    &:focus {
+      border-color: $clr-primary;
+    }
+  }
+
+  .error-input {
+    border-color: #ff1867;
+  }
+
+  &--label{
+    position: absolute;
+    left: 1rem;
+    top: 0.6rem;
+    padding: 0 0.5rem;
+    color: white;
+    cursor: text;
+    transition: top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+    background-color: $clr-bg;
+  }
+
+}
+.form--input:focus ~ .form--label, .form--input:not(:placeholder-shown).form--input:not(:focus) ~ .form--label {
+  top: -0.5rem;
+  font-size:0.8rem;
+  left: 0.8rem;
+}
+
+.error-message {
+  padding: 3px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid #ff1867 ;
+  margin: 7px;
+  margin-bottom: 1.4rem;
+  display: block;
+  color: #ff1867;
+  font-size: 12px;
+}
+
+.d-none {
+  padding: 0;
+  opacity: 0;
+}
+
+.register--btn {
+  color: $clr-primary-light;
+  letter-spacing: 0.1rem;
+  font-family: Mario Kart;
+  // font-weight: bold;
+  border: 2px solid $clr-primary ;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.register--btn:hover {
+  color: #74ffff;
+  cursor: pointer;
+  box-shadow: 0 0 10px $clr-primary;
+}
+
+.register--btn::before{
+  content: '';
+  position: absolute;
+  background-color: $clr-bg;
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: Mario Kart;
+  font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------
+
+
+// .box {
+//   height: 200px;
+//   width: 200px;
+//   overflow: auto;
+//   background: #fff;
+// }
+
+// .products--grid {
+//   display: flex;
+//   flex-direction: column;
+//   div {
+//     img {
+//       width: 100%;
+//       border-radius: 10px;
+//     }
+//     h2, p {
+//       margin: 0;
+//     }
+//   }
+// }
+
+// .styles {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
+
+// .line-error {
+//   height: 0;
+//   border-bottom: 1px solid;
+//   &.invalid {
+//     border-color: #ff1867;
+//   }
+//   &.valid {
+//     border-color: green;
+//   }
+// }
+
+// .message-error {
+//   background: #ff1867;
+//   color: #fff;
+//   opacity: 0;
+//   transition: all linear .5s;
+//   &.invalid {
+//     opacity: 100%;
+//   }
+// }
+
+// @media screen and (min-width: 40em) {
+//   .products--grid {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     grid-gap: 15px;
+
+//   }
+// }
+// @media screen and (min-width: 62em) {
+//   .products--grid {
+//     grid-template-columns: repeat(5, 1fr);
+//   }
+// }
